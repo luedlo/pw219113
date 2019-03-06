@@ -1,7 +1,8 @@
 body {
 	margin: 0px auto;
 	max-width: 1024px;
-	border: 1px solid orange;
+	font-size: 16px;
+	font-family: arial;
 }
 
 header {
@@ -9,16 +10,100 @@ header {
 }
 
 header nav {
+	width: 99%;
+	margin: 0px auto;
+	border-radius: 5px;
 	background: #006ec5;
+}
+
+header nav ul {
+	display: inline-block;
 }
 
 header nav ul li {
 	color: white;
-	font-family: arial;
 	margin-right: 20px;
 	display: inline-block;
+}
+
+header nav form {
+	float: right;
+	margin-top: 15px;
+	margin-right: 10px;
+}
+
+header nav form input {
+	border-radius: 5px;
+}
+
+header nav form input[type="button"] {
+	color: white;
+	background: #00c621;
+	border: 1px solid #00c621;
 }
 
 #logo {
 	margin-top: -200px;
 }
+
+#section1 {
+	margin-top: 10px;
+}
+
+#section1 article {
+	text-align: center;
+}
+
+#section1 article img {
+	width: 99%;
+	border: 5px solid rgba(0,0,0,0.2);
+}
+
+#section2 {
+	margin-bottom: 50px;
+}
+
+#section2 article {
+	width: 33%;
+	vertical-align: top;
+	display: inline-block;
+}
+
+#section2 article input[type="submit"] {
+	color: blue;
+	margin-left: 140px;
+	border-radius: 5px;
+}
+
+.aSection {
+	font-size: 4.5em;
+}
+
+.anotherSection {
+	font-size: 2.5em;
+}
+
+.nito {
+	font-weight: bold;
+}
+
+footer {
+	color: white;
+	padding: 20px;
+	font-size: 2em;
+	background: #112b39;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
