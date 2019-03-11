@@ -34,5 +34,80 @@ header nav ul li {
 }
 
 #paint {
-	float: right;s
+	float: right;
 }
+
+#section1 {
+	height: 318px;
+	margin-top: 60px;
+}
+
+#bgoffer {
+	position: relative;
+	top: -410px;
+	left: -30px;
+}
+
+#section1 article {
+	vertical-align: top;
+	display: inline-block;
+}
+
+#sec1_art1 {
+	width: 60%;
+	margin-left: 4%;
+}
+
+#sec1_art2 {
+	width: 30%;
+	margin-left: 5%;
+}
+
+#sec1_art2 ul {
+	list-style: none;
+	padding-left: 0px;
+}
+
+#sec1_art2 ul li:before {
+	content: "• ";
+	color: #ff0099;
+}
+
+#section2 article {
+	text-align: right;
+	margin-right: 130px;
+}
+
+
+
+
+
+
+
+
+/********* Utilities *********/
+.pink {
+	color: #ff0099;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.normalFont {
+	font-size: 2em;
+}
+
+.bigFont {
+	font-size: 3.5em;
+}
+
+
+
+
+
+
+
+
+
+
