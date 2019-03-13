@@ -78,29 +78,87 @@ header nav ul li {
 	margin-right: 130px;
 }
 
+#section3 {
+	margin-top: 20px;
+	text-align: center;
+}
 
+#section3 article {
+	width: 23%;
+	margin: 5px;
+	text-align: left;
+	vertical-align: top;
+	display: inline-block;
+}
 
+#section3 article img {
+	vertical-align: middle;
+}
+
+#section3 article input {
+	border-radius: 5px;
+}
+
+#section3 article input[type="button"] {
+	color: white;
+	background: #8BC500;
+}
+
+#sec3_art4 {
+	padding-top: 50px;
+}
+
+footer {
+	color: white;
+	background: #3b64b7;
+	padding: 40px 0px 20px 0px;
+}
+
+#foo_art1 {
+	width: 45%;
+}
+
+#foo_art2 {
+	width: 40%;
+}
+
+#foo_art3 {
+	width: 12%;
+}
+
+#foo_art3 input {
+	float: right;
+}
+
+footer section article {
+	width: 33%;
+	text-align: center;
+	display: inline-block;
+}
+
+footer section article input {
+	color: white;
+	padding: 5px;
+	border-radius: 10px;
+	background: rgba(0,0,0,0);
+}
 
 
 
 
 
 /********* Utilities *********/
-.pink {
-	color: #ff0099;
-}
+.pink { color: #ff0099; }
 
-.bold {
-	font-weight: bold;
-}
+.green { color: #8BC500; }
 
-.normalFont {
-	font-size: 2em;
-}
+.blue { color: #4267B3; }
 
-.bigFont {
-	font-size: 3.5em;
-}
+.bold {	font-weight: bold; }
+
+.normalFont { font-size: 2em; }
+
+.bigFont { font-size: 3.5em; }
 
 
 
