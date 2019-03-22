@@ -1,0 +1,219 @@
+@font-face {
+	font-family: 'Libre Baskerville';
+	src: url("Libre_Baskerville/LibreBaskerville-Regular.ttf");
+}
+
+@font-face {
+	font-family: 'Diodrum';
+	src: url("Open_Sans/OpenSans-Regular.ttf");
+}
+
+@font-face {
+	font-family: 'Lato';
+	src: url("Lato/Lato-Regular.ttf");
+}
+
+@font-face {
+	font-family: 'Archivo Black';
+	src: url("Archivo_Black/Archivo_Black-Regular.ttf");
+}
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-size: 16px;
+	min-width: 1420px;
+	max-width: 1420px;
+}
+
+section article {
+	vertical-align: top;
+	display: inline-block;
+	margin-right: -4px;
+	text-align: center;
+}
+
+section span {
+	display: block;
+}
+
+/*** Section 1 ***/
+#section1 article {
+	height: 450px;
+}
+
+#sec1_art1 {
+	width: 60%;
+	background: #f2efef;
+}
+
+#section1 article article {
+	width: 40%;
+}
+
+#section1 article article:last-child {
+	width: 60%;
+}
+
+#sec1_art1_art2 {
+	margin-top: 110px;
+}
+
+#sec1_art1_art2 span {
+	padding: 10px 70px;
+}
+
+#sec1_art1_art2 input {
+	margin-top: 30px;
+}
+
+#sec1_art1 img {
+	height: 430px;
+	position: relative;
+	top: 21px;
+	left: 100px;
+}
+
+#sec1_art2 {
+	width: 40%;
+	background: #606060;
+}
+
+#sec1_art2 span {
+	padding: 10px 70px;
+}
+
+#sec1_art2 span:first-child {
+	margin-top: 110px;
+}
+
+#sec1_art2 input {
+	margin-top: 30px;
+}
+
+
+
+
+
+
+/*** Section 2 ***/
+#section2 article {
+	height: 200px;
+}
+
+#section2 span {
+	margin-top: 30px;
+}
+
+#sec2_art1 {
+	width: 50%;
+	background: #23adf3;
+}
+
+#sec2_art1 article span {
+	padding: 0px 60px;
+}
+
+#sec2_art1 article span:last-child {
+	margin-top: 0px;
+}
+
+#section2 article article {
+	width: 30%;
+}
+
+#section2 article article:last-child {
+	width: 70%;
+}
+
+#sec2_art1 img {
+	width: 70px;
+	position: relative;
+	top: 40px;
+	left: 80px;
+}
+
+#sec2_art2 {
+	width: 20%;
+	background: #ceddce;
+}
+
+#sec2_art3 {
+	width: 30%;
+	background: #787777;
+}
+
+/* Utilities */
+.black {
+	color: black;
+}
+
+.white {
+	color: white;
+}
+
+.librebaskerville {
+	font-family: 'Libre Baskerville', sans-serif;
+}
+
+.diodrum {
+	font-family: 'Diodrum', sans-serif;
+}
+
+.lato {
+	font-family: 'Lato', sans-serif;
+}
+
+input {
+	font-family: 'Archivo Black', sans-serif;
+}
+
+
+.bold {
+	font-weight: bold;
+}
+
+.bigTitle {
+	font-size: 2em;
+	font-style: italic;
+}
+
+.normalTitle {
+	font-size: 1.2em;
+	line-height: 60px;
+}
+
+.twitterFont {
+	font-size: 1.3em;
+	font-style: italic;
+}
+
+.btnBlack {
+	background: rgba(0,0,0,0);
+	border: 2px solid black;
+	border-radius: 20px;
+	padding: 10px 20px;
+	font-size: 1em;
+	color: black;
+}
+
+.btnWhite {
+	background: rgba(0,0,0,0);
+	border: 2px solid white;
+	border-radius: 20px;
+	padding: 10px 20px;
+	font-size: 1em;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
