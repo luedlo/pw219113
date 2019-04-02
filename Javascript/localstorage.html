@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Local/Session Storage</title>
+</head>
+<body>
+
+	<div id="demo">0</div>
+	<button onclick="increase()">Increase</button>
+	<button onclick="restart()">Restart</button>
+	<button onclick="drop()">Delete</button>
+
+	<script>
+		var println = function(data) {
+			document.getElementById("demo").innerHTML = data;
+		}
+
+		var increase = function() {
+			localStorage.cuenta++;
+			println(localStorage.cuenta);
+		}
+
+		var restart = function() {
+			localStorage.cuenta = 0;
+			println(localStorage.cuenta);
+		}
+
+		var drop = function() {
+			localStorage.removeItem("cuenta");
+			println(localStorage.cuenta);
+		}
+
+		if (typeof(Storage) != "undefined") {
+			if(localStorage.cuenta) {
+				println(localStorage.cuenta);
+			}
+			else {
+				localStorage.cuenta = 0;
+			}
+		}
+	</script>
+
+</body>
+</html>

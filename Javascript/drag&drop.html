@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Drag & Drop</title>
+</head>
+<body>
+
+	<h2>Drag & Drop</h2>
+	<div id="div1">
+		<img src="img/logo.png" height="44px" width="88px" 
+		draggable="true" ondragstart="drag(event)" id="drag1">
+		<img src="img/logo.png" height="44px" width="88px" 
+		draggable="true" ondragstart="drag(event)" id="drag2">	
+		<img src="img/logo.png" height="44px" width="88px" 
+		draggable="true" ondragstart="drag(event)" id="drag3">	
+		<img src="img/logo.png" height="44px" width="88px" 
+		draggable="true" ondragstart="drag(event)" id="drag4">		
+	</div>
+
+	<div id="div2" ondragover="allowDrop(event)" ondrop="drop(event)">
+	</div>
+
+</body>
+</html>
