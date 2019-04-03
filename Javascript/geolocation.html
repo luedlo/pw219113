@@ -7,12 +7,12 @@
 <body>
 
 	<p id="demo">Get map position</p>
-	<button onClick="location();">Ok</button>
+	<button onClick="locations();">Ok</button>
 
 	<div id="map"></div>
 
 	<script>
-		function location() {
+		function locations() {
 			if (navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(showPosition, showError);
 			}
