@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Geolocation</title>
+</head>
+<body>
+
+	<p id="demo">Get map position</p>
+	<button onClick="location();">Ok</button>
+
+	<div id="map"></div>
+
+	<script>
+		function location() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition, showError);
+			}
+		}
+
+		function showPosition(position) {
+			var latlon = position.coords.latitude+","+position.coords.longitude;
+			var mapImage = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&key=AIzaSyAtKadHnn8uAWyBRXYrLPGuTX3FY_2M3ew";
+			document.getElementById("map").innerHTML = "<img src='"+mapImage+"'>";
+			document.getElementById("demo").innerHTML = latlon;
+		}
+
+		function showError(error) {
+			var message = "";
+			switch (error.code) {
+				case error.PERMISSION_DENIED:
+					message = "The user is not authorized!"
+					break;
+				case error.POSITION_UNAVAILABLE:
+					message = "The information is unavailable!"
+					break;
+				case error.TIMEOUT:
+					message = "...!"
+					break;
+				case error.UNKNOWN_ERROR:
+					mensaje="Unknown error!";
+					break;
+			}
+		}
+	</script>
+</body>
+</html>
