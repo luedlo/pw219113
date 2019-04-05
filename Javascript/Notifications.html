@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Notifications (HTML5+JavaScript)</title>
+</head>
+<body>
+
+	<button onclick="sendNotification()">
+		Notifications
+	</button>
+
+	<script>
+		function sendNotification() {
+			if (!("Notification" in window)) {
+				alert("Do not support notifications!");
+			}
+			else if (Notification.permission==="granted") {
+				var notification = new Notification("Second Notification");
+			}
+			else if (Notification.permission==="denied" ||
+				     Notification.permission==="default") {
+				Notification.requestPermission(function(permission){
+					if (permission==="granted") {
+						var notification = new Notification("First Notification");
+
+					}
+				});
+			}
+		}
+	</script>
+</body>
+</html>
