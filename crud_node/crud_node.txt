@@ -1,0 +1,11 @@
+mkdir crud_node
+cd crud_node
+
+(Install node)
+npm -v
+
+npm init --yes
+npm install express --save
+npm install morgan --save
+npm install ejs --save
+npm install nodemon --save-dev
