@@ -9,3 +9,11 @@ npm install express --save
 npm install morgan --save
 npm install ejs --save
 npm install nodemon --save-dev
+npm install mysql express-myconnection --save
+
+
+(Run)
+npm install
+npm run start
+
+rm -rf node_modules
