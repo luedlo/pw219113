@@ -7,9 +7,18 @@ controller.list = (request,response) => {
 			if (error) {
 				res.json(error);
 			}
-			console.log(customers);
+			// console.log(customers);
+			response.render('customer', {
+				data: customers
+			});
 		});
 	});
+}
+
+
+
+controller.save = (request,response) => {
+
 }
 
 

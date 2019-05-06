@@ -1,0 +1,38 @@
+<%= console.log(data); %>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Customers</title>
+</head>
+<body>
+
+	<table border align="center">
+		<thead>
+			<tr>
+				<th>No.</th>
+				<th>Name</th>
+				<th>Address</th>
+				<th>Phone</th>
+				<th>Actions</th>
+			</tr>
+			<tbody>
+				<% if (data) { %>
+					<% for (var i=0; i<data.length; i++) { %>
+						<tr>
+							<td><%= (i+1) %></td>
+							<td><%= data[i].name %></td>
+							<td><%= data[i].address %></td>
+							<td><%= data[i].phone %></td>
+							
+						</tr>
+					<% } %>
+
+				<% } %>
+			</tbody>
+		</thead>
+	</table>
+
+</body>
+</html>
