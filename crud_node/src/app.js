@@ -25,6 +25,9 @@ app.use(myConnection(mysql, {
 }, 'single'));
 
 
+app.use(express.urlencoded({ extended: false }));
+
+
 // Use routes
 app.use("/", routeIndex);
 
