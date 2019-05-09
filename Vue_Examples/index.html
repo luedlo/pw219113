@@ -9,6 +9,9 @@
 
 	<div id="app">
 		<h1>{{ title }}</h1>
+		
+		<input type="text" v-model="newFruit" placeholder="Fruit Name" @keyup.enter="addFruit">
+		<button @click="addFruit">Add Fruit</button>
 
 		<ul>
 			<li v-for="fruit of fruits">{{ fruit }}</li>
@@ -17,10 +20,13 @@
 		<ul>
 			<li v-for="fruit of fruits2">
 				{{ fruit.name }} -
-				<span v-if="fruit.quantity != 0" class="green">{{ fruit.quantity }}</span>
-				<span v-else="" class="red">Out of stock!</span>
+				<input v-if="fruit.quantity > 0" v-model="fruit.quantity" class="green" />
+				<input v-else="" v-model="fruit.quantity" class="red" />
+				<button @click="fruit.quantity++">+</button>
+				<button @click="fruit.quantity--">-</button>
 			</li>
 		</ul>
+		<h4>Total: {{ sumFruits }}</h4>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
