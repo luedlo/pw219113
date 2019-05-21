@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vuex.js example</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/vuex@3.1.1/dist/vuex.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <t></t>
+    </div>
+
+    <script>
+        // Components
+        Vue.component('t', {
+            template: 
+            `
+                <div>
+                    <h1>Number {{ number }}</h1>  
+                    <son></son>  
+                </div>
+            `,
+            computed: {
+                ...Vuex.mapState(['number'])
+            }
+        });
+
+        Vue.component('son', {
+            template: 
+            `
+                <div>
+                    <h1>Number {{ number }}</h1>
+                    <button @click="increment">+</button> 
+                    <button @click="decrement(2)">-</button> 
+                    <button @click="getPeople">Get People</button> 
+                    <ul v-for="p of people.results">
+                        <li>{{ p.name.first }} {{ p.name.last }}</li>
+                    </ul>
+                </div>
+            `,
+            computed: {
+                ...Vuex.mapState(['number', 'people'])
+            },
+            methods: {
+                ...Vuex.mapMutations(['increment', 'decrement']), 
+                ...Vuex.mapActions(['getPeople'])
+            }
+        });
+
+        // Vuex
+        const store = new Vuex.Store({
+            state: {
+                number: 10,
+                people: []
+            },
+            mutations: {
+                increment(state) {
+                    state.number++;
+                },
+                decrement(state, n) {
+                    state.number -= n;
+                },
+                fillPeople(state, webPeople) {
+                    state.people = webPeople;
+                }
+            },
+            actions: {
+                getPeople: async function({ commit }) {
+                    const data = await fetch('https://randomuser.me/api/?results=20');
+                    const people = await data.json();
+                    commit('fillPeople', people);
+                }
+            }
+        });
+
+        new Vue({
+            el: '#app',
+            store: store
+        });
+    </script>
+</body>
+</html>
